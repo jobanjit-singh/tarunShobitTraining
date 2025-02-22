@@ -19,7 +19,7 @@ console.log(typeof isLogin);
 console.log(typeof table);
 console.log(typeof weather);
 
-console.log(typeof arr[0]);
+console.log(arr);
 console.log(student["subjects of students"]);
 
 console.log(Object.keys(student));
