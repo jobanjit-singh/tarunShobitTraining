@@ -1,0 +1,28 @@
+.loginPageBaseContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--baseColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPageContentCardBaseContainer {
+  height: 80%;
+  width: 80%;
+  background-color: var(--whiteColor);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px var(--blackColor);
+  display: flex;
+}
+
+.loginPageContentContainer {
+  flex: 1;
+  background-color: red;
+}
+
+.loginPageImageContainer {
+  flex: 1;
+  background-color: aqua;
+}

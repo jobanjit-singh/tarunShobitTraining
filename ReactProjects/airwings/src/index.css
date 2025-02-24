@@ -1,3 +1,10 @@
+:root {
+  --baseColor: #09250c;
+  --secondaryColor: #ff9a17;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
