@@ -19,7 +19,36 @@
 
 .loginPageContentContainer {
   flex: 1;
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loginPageHeaderContainer {
+}
+
+.loginPageInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginPageInputTitleContainer {
+}
+
+.loginPageInputBaseContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginPageInputForgetContainer {
+}
+
+.loginPageButtonContainer {
+  padding: 10px;
+  background-color: orange;
 }
 
 .loginPageImageContainer {

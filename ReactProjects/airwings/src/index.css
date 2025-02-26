@@ -3,6 +3,7 @@
   --secondaryColor: #ff9a17;
   --whiteColor: #ffffff;
   --blackColor: #000000;
+  --borderColor: #dddddd;
 }
 
 * {
@@ -14,4 +15,5 @@ html,
 body {
   width: 100%;
   height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
