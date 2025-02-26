@@ -4,13 +4,22 @@ import { IoMdEye } from "react-icons/io";
 import { LuEyeClosed } from "react-icons/lu";
 import { useState } from "react";
 
-function CustomInput({ placeholder, Icon, type, isSecureEntry = false }) {
+function CustomInput({
+  placeholder,
+  Icon,
+  type,
+  isSecureEntry = false,
+  value,
+  onChange,
+}) {
   const [showText, setShowText] = useState(false);
 
   return (
     <div className="customInputBaseContainer">
       <div className="customInputContainer">
         <input
+          value={value}
+          onChange={onChange}
           placeholder={placeholder ? placeholder : "Enter text"}
           type={isSecureEntry ? (showText ? "text" : "password") : type}
         />

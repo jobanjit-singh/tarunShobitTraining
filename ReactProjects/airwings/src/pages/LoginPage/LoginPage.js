@@ -1,8 +1,23 @@
 import CustomInput from "../../components/CustomInput/CustomInput";
 import { IoIosMail } from "react-icons/io";
 import "./styles.css";
+import { useState } from "react";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import COLOR from "../../config/color";
+import ASSETS from "../../assets";
 
 function LoginPage() {
+  const [email, setEmail] = useState("a");
+  const [password, setPassword] = useState("");
+
+  const handleForgetPassword = () => {
+    alert("Forget Password functionality is not implemented yet.");
+  };
+
+  const handleSignUp = () => {
+    alert("Sign Up functionality is not implemented yet.");
+  };
+
   return (
     <div className="loginPageBaseContainer">
       <div className="loginPageContentCardBaseContainer">
@@ -16,21 +31,46 @@ function LoginPage() {
             </div>
             <div className="loginPageInputBaseContainer">
               <CustomInput
+                value={email}
+                onChange={(text) => {
+                  setEmail(text.target.value);
+                }}
                 placeholder={"Enter email"}
                 Icon={IoIosMail}
                 type={"email"}
               />
               <CustomInput
+                value={password}
+                onChange={(text) => {
+                  setPassword(text.target.value);
+                }}
                 placeholder={"Enter Password"}
                 type={"password"}
                 isSecureEntry={true}
               />
             </div>
-            <div className="loginPageInputForgetContainer"></div>
+            <div className="loginPageInputForgetContainer">
+              <p onClick={handleForgetPassword}>Forget Password ?</p>
+            </div>
           </div>
-          <div className="loginPageButtonContainer"></div>
+          <div className="loginPageButtonContainer">
+            <CustomButton
+              title={"Login"}
+              backgroundColor={COLOR.secondaryColor}
+              color={COLOR.whiteColor}
+              onClick={() => alert("Login Done")}
+            />
+            <p id="signUpText">
+              Don't have an account? <span onClick={handleSignUp}>SignUp</span>
+            </p>
+          </div>
         </div>
-        <div className="loginPageImageContainer"></div>
+        <div
+          className="loginPageImageContainer"
+          style={{
+            backgroundImage: `url(${ASSETS.loginBackImage})`,
+          }}
+        ></div>
       </div>
     </div>
   );

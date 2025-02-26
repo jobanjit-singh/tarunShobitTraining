@@ -23,18 +23,24 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 50px;
 }
 
 .loginPageHeaderContainer {
 }
 
 .loginPageInputContainer {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .loginPageInputTitleContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .loginPageInputBaseContainer {
@@ -44,14 +50,41 @@
 }
 
 .loginPageInputForgetContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginPageInputForgetContainer p {
+  font-size: 10px;
+  color: var(--greyColor);
+}
+
+.loginPageInputForgetContainer p:hover {
+  cursor: pointer;
 }
 
 .loginPageButtonContainer {
-  padding: 10px;
-  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+
+.loginPageButtonContainer #signUpText {
+  text-align: center;
+  color: var(--greyColor);
+  font-size: 10px;
+}
+
+.loginPageButtonContainer #signUpText span {
+  cursor: pointer;
+  color: var(--blackColor);
+  font-weight: bold;
 }
 
 .loginPageImageContainer {
   flex: 1;
-  background-color: aqua;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
