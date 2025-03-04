@@ -5,8 +5,11 @@
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  transition: 0.5s ease-in-out;
 }
 
 .customButtonBaseContainer:hover {
   cursor: pointer;
+  background-color: var(--secondaryColor) !important;
+  color: var(--baseColor) !important;
 }

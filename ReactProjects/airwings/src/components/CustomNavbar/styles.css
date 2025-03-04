@@ -1,0 +1,67 @@
+.navbarBaseContainer {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.navbarLogoContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.navbarLogoBaseContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--whiteColor);
+}
+
+.navbarLogoBaseContainer img {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.navbarLogoBaseContainer .aeroPlaneIcon {
+  transition: 0.5s ease-in-out;
+  color: var(--secondaryColor);
+}
+
+.navbarLogoBaseContainer .aeroPlaneIcon:hover {
+  transform: rotate(-45deg) translateX(100px);
+  opacity: 0;
+  color: var(--whiteColor);
+}
+
+.navbarLinkContainer {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.navbarLinkContainer p {
+  font-size: 18px;
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.navbarLinkContainer p:hover {
+  color: var(--secondaryColor);
+  font-weight: bold;
+  text-decoration-line: underline;
+}
+
+.navbarProfileContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbarProfileButtonContainer {
+  display: flex;
+  gap: 10px;
+}
