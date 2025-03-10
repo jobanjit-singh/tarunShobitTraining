@@ -22,6 +22,10 @@
   border-radius: 50%;
 }
 
+.navbarMenuIcon {
+  display: none;
+}
+
 .navbarLogoBaseContainer .aeroPlaneIcon {
   transition: 0.5s ease-in-out;
   color: var(--secondaryColor);
@@ -64,4 +68,60 @@
 .navbarProfileButtonContainer {
   display: flex;
   gap: 10px;
+}
+
+.navBarSideBarBaseContainer {
+  display: none;
+}
+
+/* Tablet Device */
+@media (max-width: 1024px) {
+  .navbarLinkContainer {
+    display: none;
+  }
+  .navbarProfileContainer {
+    display: none;
+  }
+  .navbarMenuIcon {
+    display: flex;
+  }
+  .navBarSideBarBaseContainer {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: var(--blackColorDim);
+    backdrop-filter: blur(20px);
+  }
+  .navBarSideBarContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    background-color: var(--whiteColor);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .navBarSideBarIconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--baseColor);
+  }
+  .navBarSideBarLinkContainer {
+    flex: 1;
+    background-color: blue;
+  }
+}
+
+/* Standard Mobile */
+@media (max-width: 768px) {
+}
+
+/* Small Device */
+@media (max-width: 480px) {
 }
