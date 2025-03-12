@@ -6,16 +6,23 @@ import { IoAirplaneSharp } from "react-icons/io5";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { MdCancel } from "react-icons/md";
 import gsap from "gsap";
+import { useNavigate } from "react-router-dom";
+import ROUTES from "../../config/routes";
 
 export default function CustomNavbar() {
   const sideBarRef = useRef();
+  const [showSideBar, setShowSideBar] = useState(false);
+
+  const navigate = useNavigate();
 
   const linkList = [
     {
       title: "Home",
+      path: ROUTES.homePage,
     },
     {
       title: "Services",
+      path: ROUTES.servicesPage,
     },
     {
       title: "About Us",
@@ -31,20 +38,24 @@ export default function CustomNavbar() {
     },
   ];
 
-  const handleShowSideBar = () => {
-    gsap.to(sideBarRef.current, {
-      translateX: "0%",
-      opacity: 1,
-      duration: 0.5,
-    });
-  };
+  useEffect(() => {
+    if (showSideBar) {
+      gsap.to(sideBarRef.current, {
+        translateX: "0%",
+        opacity: 1,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(sideBarRef.current, {
+        translateX: "-100%",
+        opacity: 0,
+        duration: 0.5,
+      });
+    }
+  }, [showSideBar]);
 
-  const handleHideSideBar = () => {
-    gsap.to(sideBarRef.current, {
-      translateX: "-100%",
-      opacity: 0,
-      duration: 0.5,
-    });
+  const handleSideBarVisible = () => {
+    setShowSideBar(!showSideBar);
   };
 
   return (
@@ -54,7 +65,7 @@ export default function CustomNavbar() {
           {/* <img src={ASSETS.mainLogo} alt="main-logo" /> */}
           <HiOutlineMenuAlt2
             className="navbarMenuIcon"
-            onClick={handleShowSideBar}
+            onClick={handleSideBarVisible}
             size={24}
           />
           <h2>
@@ -73,7 +84,7 @@ export default function CustomNavbar() {
       </div>
       <div className="navbarLinkContainer">
         {linkList.map((item) => {
-          return <p>{item.title}</p>;
+          return <p onClick={() => navigate(item.path)}>{item.title}</p>;
         })}
       </div>
       <div className="navbarProfileContainer">
@@ -106,7 +117,7 @@ export default function CustomNavbar() {
                 Wings
               </span>
             </h1>
-            <MdCancel size={30} onClick={handleHideSideBar} />
+            <MdCancel size={30} onClick={handleSideBarVisible} />
           </div>
           <div className="navBarSideBarLinkContainer"></div>
         </div>
